@@ -20,7 +20,7 @@ public class ItemManageWindow : MonoBehaviour
     public void Show(RectTransform buttonTransform)
     {
         _turnOffScreenArea.SetActive(true);
-        transform.anchoredPosition = buttonTransform.anchoredPosition + new Vector2(-buttonTransform.sizeDelta.y * 0.5f, buttonTransform.sizeDelta.y * 0.5f);
+        transform.anchoredPosition = buttonTransform.anchoredPosition + new Vector2(-buttonTransform.sizeDelta.x * 0.5f, -buttonTransform.sizeDelta.y);
     }
 
     public void Hide()

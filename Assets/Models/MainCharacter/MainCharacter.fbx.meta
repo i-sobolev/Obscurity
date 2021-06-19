@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 9915a6506cf06854ca439630455d8f95
+guid: fddcc7a5f3d2ef14393380d536fb75d0
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable:
@@ -10,14 +10,11 @@ ModelImporter:
       74: -8945691123924629249
     second: Armature|Idle
   - first:
-      74: -5756062760189935871
-    second: Armature|Nasruto Run
+      74: 7051088703890978335
+    second: Armature|Run Diag Front Left
   - first:
-      74: -1866608986281950374
-    second: Armature|Nasruto Stand
-  - first:
-      74: 8244790100111800250
-    second: Armature|Run Backward
+      74: 7466827739152674273
+    second: Armature|Run Diag Front Right
   - first:
       74: 4151848029851221268
     second: Armature|Run Forward
@@ -30,7 +27,17 @@ ModelImporter:
   - first:
       74: 786504323170427181
     second: Armature|T-Pose
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Clothes1
+    second: {fileID: 2100000, guid: 98fd26ff95e64b749be04e85cac5bf47, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Clothes2
+    second: {fileID: 2100000, guid: 376d22f31b592c94381eb606fe1e037f, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
@@ -59,11 +66,11 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Armature|Holding a Touch
-      takeName: Armature|Holding a Touch
+      name: Armature|T-Pose
+      takeName: Armature|T-Pose
       internalID: 0
       firstFrame: 0
-      lastFrame: 40
+      lastFrame: 1
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -117,8 +124,8 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Armature|Run Backward
-      takeName: Armature|Run Backward
+      name: Armature|Run Diag Front Left
+      takeName: Armature|Run Diag Front Left
       internalID: 0
       firstFrame: 0
       lastFrame: 20
@@ -126,6 +133,35 @@ ModelImporter:
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|Run Diag Front Right
+      takeName: Armature|Run Diag Front Right
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 20
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0.5
       loop: 0
       hasAdditiveReferencePose: 0
       loopTime: 1
@@ -154,7 +190,7 @@ ModelImporter:
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
-      cycleOffset: 0
+      cycleOffset: 0.5
       loop: 0
       hasAdditiveReferencePose: 0
       loopTime: 1
@@ -212,7 +248,7 @@ ModelImporter:
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
-      cycleOffset: 0
+      cycleOffset: 0.5
       loop: 0
       hasAdditiveReferencePose: 0
       loopTime: 1
@@ -233,18 +269,18 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Armature|T-Pose
-      takeName: Armature|T-Pose
+      name: Armature|Holding a Touch
+      takeName: Armature|Holding a Touch
       internalID: 0
       firstFrame: 0
-      lastFrame: 1
+      lastFrame: 40
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0

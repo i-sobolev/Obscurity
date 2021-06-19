@@ -7,6 +7,11 @@ public class StorageBuilding : Building, IStorage
     public int MaxItems { get; set; }
     public bool IsLocked { get; set; }
 
+    private void Awake()
+    {
+        Items = new List<Item>();
+    }
+
     public void Iteract(Player player)
     {
         player.Inventory.OpenStorage(this);

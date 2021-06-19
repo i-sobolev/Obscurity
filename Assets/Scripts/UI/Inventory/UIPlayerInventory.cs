@@ -33,6 +33,11 @@ public class UIPlayerInventory : MonoBehaviour
             ShowItems(_playerInventory, transform);
     }
 
+    private void OnDisable()
+    {
+        HideStorageWindow();
+    }
+
     private void ShowItems(IStorage storage, Transform parentItemsTransform)
     {
         parentItemsTransform.GetComponentsInChildren<UIItem>().ToList().ForEach(item => Destroy(item.gameObject));
