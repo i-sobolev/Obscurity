@@ -17,26 +17,35 @@ public class UIPlayerInventory : MonoBehaviour
 
     private void Awake()
     {
+        _itemManageWindow.DropButton.onClick.AddListener(DropItem);
+        _itemManageWindow.TakeButton.onClick.AddListener(TakeItemFromStorage);
+        _itemManageWindow.PutButton.onClick.AddListener(PutItemInStorage);
+        
         HideStorageWindow();
-        _itemManageWindow.DropButton.onClick.AddListener(() => DropItem());
     }
 
     private void Start()
     {
         _playerInventory = Player.Instance.Inventory;
         _playerInventory.OnStorageOpen += ShowStorageWindow;
+        _playerInventory.OnItemListChanged += ShowPlayerInventoryItems; 
     }
 
     private void OnEnable()
     {
         if (_playerInventory)
-            ShowItems(_playerInventory, transform);
+            ShowPlayerInventoryItems();
     }
 
     private void OnDisable()
     {
         HideStorageWindow();
+        _itemManageWindow.Hide();
     }
+
+    private void ShowOpenedStorageItems() => ShowItems(_openedStorage, _storageUIElement.transform);
+
+    private void ShowPlayerInventoryItems() => ShowItems(_playerInventory, transform);
 
     private void ShowItems(IStorage storage, Transform parentItemsTransform)
     {
@@ -44,16 +53,24 @@ public class UIPlayerInventory : MonoBehaviour
 
         storage.Items.ForEach(item =>
         {
-            var newItemButton = Instantiate(_itemTemplate, transform);
-            newItemButton.Set(ref item);
+            var newItemButton = Instantiate(_itemTemplate, parentItemsTransform.transform);
+            newItemButton.Set(ref item, storage);
             newItemButton.ButtonComponent.onClick.AddListener(() => ShowItemManageWindow(newItemButton));
         });
     }
 
     private void ShowItemManageWindow(UIItem itemButton)
     {
+        var itemStorageType =
+            _openedStorage == null ?
+            ItemManageWindow.StorageType.JustPlayerInventory :
+            (object)itemButton.LinkedStorage == _playerInventory ?
+            ItemManageWindow.StorageType.PlayerInventory :
+            ItemManageWindow.StorageType.Storage;
+            
+
         _itemManageWindow.gameObject.SetActive(true);
-        _itemManageWindow.Show(itemButton.transform as RectTransform);
+        _itemManageWindow.Show(itemStorageType);
         _selectedItem = itemButton;
     }
 
@@ -74,6 +91,29 @@ public class UIPlayerInventory : MonoBehaviour
     {
         _playerInventory.DropItem(_selectedItem.ItemReference);
         Destroy(_selectedItem.gameObject);
+        ShowPlayerInventoryItems();
+
         _itemManageWindow.Hide();
+    }
+
+    private void TakeItemFromStorage()
+    {
+        _playerInventory.AddItem(_selectedItem.ItemReference);
+        _openedStorage.Items.Remove(_selectedItem.ItemReference);
+        
+        ShowOpenedStorageItems();
+
+        _itemManageWindow.Hide();
+    }
+
+    private void PutItemInStorage()
+    {
+        _playerInventory.RemoveItem(_selectedItem.ItemReference);
+        _openedStorage.Items.Add(_selectedItem.ItemReference);
+        
+        _itemManageWindow.Hide();
+
+        ShowPlayerInventoryItems();
+        ShowOpenedStorageItems();
     }
 }

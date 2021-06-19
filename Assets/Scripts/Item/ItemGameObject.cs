@@ -8,7 +8,7 @@ public class ItemGameObject : MonoBehaviour, IIteractable
 
     public void Iteract(Player player)
     {
-        player.Inventory.AddItem(this);
+        player.Inventory.AddItem(Item);
         Destroy(gameObject);
     }
 }

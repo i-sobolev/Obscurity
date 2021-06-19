@@ -24,9 +24,14 @@ public class Inventory : MonoBehaviour, IStorage
         }    
     }
 
-    public virtual void AddItem(ItemGameObject item)
+    public virtual void AddItem(Item item)
     {
-        Items.Add(item.Item);
+        Items.Add(item);
+    }
+
+    public virtual void RemoveItem(Item item)
+    {
+        Items.Remove(item);
     }
 
     public virtual void DropItem(Item item)

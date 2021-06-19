@@ -5,7 +5,7 @@ using UnityEngine.Events;
 
 public class PlayerInventory : Inventory
 {
-    public UnityAction<ItemGameObject> OnAddItem;
+    public UnityAction OnItemListChanged;
     public UnityAction<IStorage> OnStorageOpen;
 
     public void OpenStorage(IStorage storage)
@@ -14,11 +14,19 @@ public class PlayerInventory : Inventory
         OnStorageOpen?.Invoke(storage);
     }
 
-    public override void AddItem(ItemGameObject item)
+    public override void AddItem(Item item)
     {
         base.AddItem(item);
-        ActionsLogger.Instance.Log(item.Item.Name + " added to inventory.");
+        ActionsLogger.Instance.Log(item.Name + " added to inventory.");
 
-        OnAddItem?.Invoke(item);
+        OnItemListChanged?.Invoke();
+    }
+
+    public override void RemoveItem(Item item)
+    {
+        base.RemoveItem(item);
+        ActionsLogger.Instance.Log(item.Name + " removed from inventory.");
+
+        OnItemListChanged?.Invoke();
     }
 }
