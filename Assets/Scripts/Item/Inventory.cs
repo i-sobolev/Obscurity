@@ -36,7 +36,9 @@ public class Inventory : MonoBehaviour, IStorage
 
     public virtual void DropItem(Item item)
     {
-        Instantiate(item.Model, transform.position, Quaternion.identity);
+        var droppedItem = Instantiate(item.GameObject, transform.position, Quaternion.identity);
+        droppedItem.Item = item;
+        
         Items.Remove(item);
     }
 }

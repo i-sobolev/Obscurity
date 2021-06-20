@@ -7,10 +7,16 @@ public class HumanoidAnimator : MonoBehaviour
     [SerializeField] private float _angleOffset;
     [SerializeField] private Transform _playerTransform;
     private Animator _animator;
+    private PlayerMover _playerMover;
 
     private void Awake()
     {
         _animator = GetComponent<Animator>();
+    }
+
+    private void Start()
+    {
+        _playerMover = Player.Instance.Mover;
     }
 
     private void Update()
@@ -25,7 +31,7 @@ public class HumanoidAnimator : MonoBehaviour
             y = input.y * Mathf.Cos(_playerRotation) + input.x * Mathf.Sin(_playerRotation),
         };
 
-        rotatedIntut = Vector2.ClampMagnitude(rotatedIntut, 1);
+        rotatedIntut = Vector2.ClampMagnitude(rotatedIntut, 1f) * _playerMover.Speed;
 
         _animator.SetFloat("VelocityX", rotatedIntut.x);
         _animator.SetFloat("VelocityZ", rotatedIntut.y);

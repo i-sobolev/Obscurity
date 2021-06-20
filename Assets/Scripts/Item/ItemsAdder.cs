@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ItemsAdder : MonoBehaviour
 {
-    [SerializeField] private List<Item> _items;
+    [SerializeField] private List<ScriptableObjects.Item> _items;
 
     public void Start()
     {
@@ -13,6 +13,11 @@ public class ItemsAdder : MonoBehaviour
         if (storage.Items == null)
             storage.Items = new List<Item>();
 
-        storage.Items.AddRange(_items);
+
+        _items.ForEach(item =>
+        {
+            var newItem = item is ScriptableObjects.Resources ? new Resources(item as ScriptableObjects.Resources) : new Item(item);
+            storage.Items.Add(newItem);
+        });
     }
 }

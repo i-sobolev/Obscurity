@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
@@ -22,7 +19,7 @@ public class BuildingButton : MonoBehaviour
 
     public void Select()
     {
-        Player.Instance.Build(Building.BuildingTemplate);
+        Player.Instance.Build(Building);
         OnSelected?.Invoke();
     }
 }

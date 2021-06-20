@@ -59,6 +59,8 @@ AvatarMask:
     m_Weight: 0
   - m_Path: Armature/spine1/spine2/spine3/neck/head
     m_Weight: 0
+  - m_Path: Armature/spine1/spine2/spine3/neck/head/Test Hat
+    m_Weight: 0
   - m_Path: Armature/spine1/spine2/spine3/shoulder.L
     m_Weight: 1
   - m_Path: Armature/spine1/spine2/spine3/shoulder.L/bicep.L
@@ -97,3 +99,5 @@ AvatarMask:
     m_Weight: 0
   - m_Path: Body
     m_Weight: 1
+  - m_Path: Test Coat
+    m_Weight: 0

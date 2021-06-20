@@ -8,9 +8,9 @@ public class Builder : MonoBehaviour
     [SerializeField] private Material _previewMaterial = null;
 
     private bool _isBuilds = false;
-    private Building _selectedBuilding;
+    private ScriptableObjects.Building _selectedBuilding;
 
-    public void Build(Building selectedBuiding)
+    public void Build(ScriptableObjects.Building selectedBuiding)
     {
         if (!_isBuilds)
         {
@@ -45,11 +45,13 @@ public class Builder : MonoBehaviour
 
     private void Build(Vector3 position)
     {
-        var newBuilding = Instantiate(_selectedBuilding, position, Quaternion.identity);
+        var newBuilding = Instantiate(_selectedBuilding.BuildingTemplate, position, Quaternion.identity);
         var buildingComponent = newBuilding.GetComponent<Building>();
 
         buildingComponent.GetComponent<Building>().Owner = "TestOwner";
         World.Instance.SaveBuilding(buildingComponent);
+
+        Player.Instance.Inventory.RemoveResouces(_selectedBuilding.RequiredResources);
 
         ActionsLogger.Instance.Log("Building builded!");//
     }
@@ -58,7 +60,7 @@ public class Builder : MonoBehaviour
     {
         const int ignoreRaycastLayer = 2;
         
-        var buildPreview = Instantiate(_selectedBuilding, Player.Instance.Cursor.CursorWorldPosition, Quaternion.identity);
+        var buildPreview = Instantiate(_selectedBuilding.BuildingTemplate, Player.Instance.Cursor.CursorWorldPosition, Quaternion.identity);
         buildPreview.gameObject.layer = ignoreRaycastLayer;
 
         buildPreview.GetComponentsInChildren<Collider>().ToList().ForEach(collider => collider.isTrigger = true);

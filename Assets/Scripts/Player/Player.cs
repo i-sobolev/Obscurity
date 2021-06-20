@@ -34,9 +34,22 @@ public class Player : MonoBehaviour
         Mover.LookAt(Cursor.CursorWorldPosition);
     }
 
-    public void Build(Building selectedBuilding)
+    public void Build(ScriptableObjects.Building selectedBuilding)
     {
-        Builder.Build(selectedBuilding);
+        if (CheckResources(selectedBuilding))
+            Builder.Build(selectedBuilding);
+
+        else
+            ActionsLogger.Instance.Log("No resources");
+    }
+
+    private bool CheckResources(ScriptableObjects.Building selectedBuilding)
+    {
+        foreach (var requiredResources in selectedBuilding.RequiredResources)
+            if (!Inventory.CheckResouces(requiredResources.ResoucesType, requiredResources.Amount))
+                return false;
+
+        return true;
     }
 
     private void Iteract()

@@ -67,7 +67,6 @@ public class UIPlayerInventory : MonoBehaviour
             (object)itemButton.LinkedStorage == _playerInventory ?
             ItemManageWindow.StorageType.PlayerInventory :
             ItemManageWindow.StorageType.Storage;
-            
 
         _itemManageWindow.gameObject.SetActive(true);
         _itemManageWindow.Show(itemStorageType);
@@ -77,14 +76,14 @@ public class UIPlayerInventory : MonoBehaviour
     private void ShowStorageWindow(IStorage openedStorage)
     {
         _openedStorage = openedStorage;
-        _storageUIElement.SetActive(true);
+        _storageUIElement.transform.parent.gameObject.SetActive(true);
         ShowItems(openedStorage, _storageUIElement.transform);
     }
 
     private void HideStorageWindow()
     {
         _openedStorage = null;
-        _storageUIElement.SetActive(false);
+        _storageUIElement.transform.parent.gameObject.SetActive(false);
     }
 
     private void DropItem()
