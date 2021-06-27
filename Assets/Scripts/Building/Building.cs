@@ -19,4 +19,6 @@ public class BuildingViewModel
 
     public LightningViewModel lightning;
     public StorageViewModel storage;
+
+    public float rotation;
 }

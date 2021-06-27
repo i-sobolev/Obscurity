@@ -53,7 +53,7 @@ public class Builder : MonoBehaviour
 
         Player.Instance.Inventory.RemoveResouces(_selectedBuilding.RequiredResources);
 
-        ActionsLogger.Instance.Log("Building builded!");//
+        ActionsLogger.Instance.Log($"{buildingComponent.name} builded!");
     }
 
     private Building CreatePreview()

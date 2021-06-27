@@ -38,6 +38,7 @@ public class World : MonoBehaviour
             xPosition = building.transform.position.x,
             yPosition = building.transform.position.y,
             zPosition = building.transform.position.z,
+            rotation = building.transform.rotation.eulerAngles.y,
             typeId = building.TypeId,
             lightning = building is LightningBuilding l ? new LightningViewModel() { Fuel = l.Fuel } : new LightningViewModel() { Id = -1 },
             storage = building is StorageBuilding s ? new StorageViewModel() { isLocked = s.IsLocked } : new StorageViewModel() { id = -1 }
@@ -52,7 +53,12 @@ public class World : MonoBehaviour
         {
             var wolrdPosition = new Vector3(building.xPosition, building.yPosition, building.zPosition);
 
-            var newBuilding = Instantiate(BuildingTemlates.Buildings[building.typeId].BuildingTemplate, wolrdPosition, Quaternion.identity);
+            var newBuilding = Instantiate
+            (
+                BuildingTemlates.Buildings[building.typeId].BuildingTemplate, 
+                wolrdPosition, 
+                Quaternion.Euler(0, building.rotation, 0)
+            );
 
             newBuilding.Owner = building.owner;
 
