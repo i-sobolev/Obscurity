@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class JournalSwitcher : MonoBehaviour
 {
+    public bool IsOpened { get; private set; }
+
     [SerializeField] private GameObject _journalGameObject = null;
     public static JournalSwitcher Instance { get; private set; }
 
@@ -16,10 +18,16 @@ public class JournalSwitcher : MonoBehaviour
     }
 
     public void SwitchJournal() => _journalGameObject.SetActive(!_journalGameObject.activeInHierarchy);
-    public void SwitchJournal(TabName tabName)
+
+    public void OpenJournal() => _journalGameObject.SetActive(true);
+
+    public void CloseJournal() => _journalGameObject.SetActive(false);
+
+    public void OpenJournal(TabType tabType)
     {
-        SwitchJournal();
-        _journal.ShowTab(TabName.Inventory);
+        OpenJournal();
+
+        _journal.ShowTab(tabType);
     }
 
     void Update()

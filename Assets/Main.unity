@@ -2375,7 +2375,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Journal: {fileID: 0}
   LinkedButton: {fileID: 1311450273}
-  TabName: 0
+  TabName: 1
 --- !u!1 &1416141189
 GameObject:
   m_ObjectHideFlags: 0

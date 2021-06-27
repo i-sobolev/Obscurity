@@ -21,4 +21,6 @@ public class BuildingViewModel
     public StorageViewModel storage;
 
     public float rotation;
+
+    public int worldId;
 }

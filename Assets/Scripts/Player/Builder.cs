@@ -33,19 +33,22 @@ public class Builder : MonoBehaviour
             if (Input.GetButtonDown("Fire1") || Input.GetButtonDown("Fire2"))
             {
                 if (Input.GetButtonDown("Fire1"))
-                    Build(buildPreview.transform.position);
+                    Build(buildPreview.transform.position, buildPreview.transform.eulerAngles);
                 
                 Destroy(buildPreview.gameObject);
                 _isBuilds = false;
 
                 break;
             }
+
+            if (Input.GetKey(KeyCode.Q))
+                buildPreview.transform.Rotate(Vector3.up, Time.deltaTime * 120);
         }
     }
 
-    private void Build(Vector3 position)
+    private void Build(Vector3 position, Vector3 rotation)
     {
-        var newBuilding = Instantiate(_selectedBuilding.BuildingTemplate, position, Quaternion.identity);
+        var newBuilding = Instantiate(_selectedBuilding.BuildingTemplate, position, Quaternion.Euler(rotation));
         var buildingComponent = newBuilding.GetComponent<Building>();
 
         buildingComponent.GetComponent<Building>().Owner = "TestOwner";

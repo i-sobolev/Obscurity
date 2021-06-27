@@ -16,5 +16,8 @@ public class PlayerCursor : MonoBehaviour
         CursorWorldPosition = hits.point;
 
         CatchedEntity = hits.collider.gameObject.GetComponent<MonoBehaviour>() as IIteractable;
+
+        if (Input.GetMouseButtonDown(0) && CatchedEntity != null && CatchedEntity is Building building)
+            ActionsLogger.Instance.Log($"Builded by {building.name}");
     }
 }

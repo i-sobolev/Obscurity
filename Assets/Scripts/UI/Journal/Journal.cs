@@ -19,5 +19,5 @@ public class Journal : MonoBehaviour
     }
 
     public void ShowTab(Tab selectedTab) => Tabs.ForEach(tab => tab.gameObject.SetActive(tab == selectedTab));
-    public void ShowTab(TabName tabName) => Tabs.ForEach(tab => tab.gameObject.SetActive(tab.TabName == tabName));
+    public void ShowTab(TabType tabType) => Tabs.ForEach(tab => tab.gameObject.SetActive(tab.TabName == tabType));
 }

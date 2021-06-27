@@ -13,9 +13,9 @@ namespace API
         
         private readonly string _apiUri = "http://ovz6.burnfeniks.m61kn.vps.myjino.ru/api/Building";
 
-        public IEnumerator Get()
+        public IEnumerator Get(int worldId)
         {
-            UnityWebRequest webRequest = UnityWebRequest.Get(_apiUri);
+            UnityWebRequest webRequest = UnityWebRequest.Get(_apiUri + $"?worldId={worldId}");
             webRequest.SetRequestHeader("Content-type", "application/json");
 
             yield return webRequest.SendWebRequest();

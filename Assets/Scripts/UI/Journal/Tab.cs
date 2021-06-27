@@ -7,7 +7,7 @@ public class Tab : MonoBehaviour
 {
     [HideInInspector] public Journal Journal;
     public Button LinkedButton;
-    public TabName TabName;
+    public TabType TabName;
 }
 
-public enum TabName { Builder, Inventory }
+public enum TabType { Builder, Inventory }

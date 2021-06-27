@@ -11,7 +11,7 @@ public class PlayerInventory : Inventory
 
     public void OpenStorage(IStorage storage)
     {
-        JournalSwitcher.Instance.SwitchJournal();
+        JournalSwitcher.Instance.OpenJournal(TabType.Inventory);
         OnStorageOpen?.Invoke(storage);
     }
 

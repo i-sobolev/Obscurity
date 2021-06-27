@@ -26,7 +26,7 @@ public class World : MonoBehaviour
 
     private IEnumerator GetBuildings()
     {
-        yield return _apiBuildingController.Get().Start(this);
+        yield return _apiBuildingController.Get(PlayerData.Values.worldId).Start(this);
         WorldBuildingsInstantiate(_apiBuildingController.RequestResult);
     }
 
@@ -34,14 +34,15 @@ public class World : MonoBehaviour
     {
         var newBuilding = new BuildingViewModel()
         {
-            owner = building.Owner,
+            owner = PlayerData.Values.name,
             xPosition = building.transform.position.x,
             yPosition = building.transform.position.y,
             zPosition = building.transform.position.z,
             rotation = building.transform.rotation.eulerAngles.y,
             typeId = building.TypeId,
             lightning = building is LightningBuilding l ? new LightningViewModel() { Fuel = l.Fuel } : new LightningViewModel() { Id = -1 },
-            storage = building is StorageBuilding s ? new StorageViewModel() { isLocked = s.IsLocked } : new StorageViewModel() { id = -1 }
+            storage = building is StorageBuilding s ? new StorageViewModel() { isLocked = s.IsLocked } : new StorageViewModel() { id = -1 },
+            worldId = PlayerData.Values.worldId
         };
 
         _apiBuildingController.Post(newBuilding).Start(this);
@@ -56,7 +57,7 @@ public class World : MonoBehaviour
             var newBuilding = Instantiate
             (
                 BuildingTemlates.Buildings[building.typeId].BuildingTemplate, 
-                wolrdPosition, 
+                wolrdPosition,
                 Quaternion.Euler(0, building.rotation, 0)
             );
 
