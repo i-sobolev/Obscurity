@@ -9,5 +9,6 @@ namespace ScriptableObjects
     {
         public string Name;
         public ItemGameObject GameObject;
+        public int TypeId;
     }
 }

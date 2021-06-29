@@ -40,6 +40,7 @@ public class WorldList : MonoBehaviour
         yield return request.Put(worldId).Start(this);
 
         PlayerData.Values.worldId = worldId;
+        PlayerDataSaver.Instance.SaveData();
 
         yield return GetWorlds().Start(this);
     }

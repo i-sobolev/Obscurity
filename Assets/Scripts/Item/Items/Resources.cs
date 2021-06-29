@@ -15,3 +15,10 @@ public class Resources : Item
     public ResoucesType ResoucesType;
     public int Amount;
 }
+
+[Serializable]
+public class ResourceViewModel
+{
+    public int id;
+    public int amount;
+}

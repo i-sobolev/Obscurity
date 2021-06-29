@@ -7,7 +7,7 @@ namespace ScriptableObjects
     public class Building : ScriptableObject
     {
         public global::Building BuildingTemplate;
-        public Image Icon;
+        public Sprite Icon;
         public string Name;
         public RequiredResources[] RequiredResources;
     }

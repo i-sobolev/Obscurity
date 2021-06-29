@@ -1,10 +1,12 @@
 ﻿using UnityEngine;
 
 [System.Serializable]
-public class Building : MonoBehaviour
+public class Building : MonoBehaviour, IIteractable
 {
     public int TypeId;
     public string Owner;
+
+    public virtual void Iteract(Player player) { }
 }
 
 [System.Serializable]

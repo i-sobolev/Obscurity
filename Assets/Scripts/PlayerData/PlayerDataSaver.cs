@@ -35,7 +35,7 @@ public class PlayerDataSaver : MonoBehaviour
 
             PlayerData.Values = new PlayerViewModel() { id = savedPlayerData.id, name = savedPlayerData.name, worldId = savedPlayerData.worldId };
 
-            OnDataLoaded(savedPlayerData.name);
+            OnDataLoaded?.Invoke(savedPlayerData.name);
         }
     }
 
@@ -56,13 +56,11 @@ public class PlayerDataSaver : MonoBehaviour
         SaveData();
 
         OnDataLoaded(newName);
-
+        
         Debug.Log($"Nickname changer: {newName}");
     }
 
-    private void OnDestroy() => SaveData();
-
-    private void SaveData()
+    public void SaveData()
     {
         PlayerPrefs.SetString(DataKey, JsonUtility.ToJson(PlayerData.Values));
         PlayerPrefs.Save();

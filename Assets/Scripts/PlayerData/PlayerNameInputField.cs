@@ -9,8 +9,9 @@ public class PlayerNameInputField : MonoBehaviour
 
     private void Start()
     {
+        PlayerDataSaver.Instance.OnDataLoaded += (name) => InputField.text = name;
         InputField.onEndEdit.AddListener(PlayerDataSaver.Instance.ChangeNickName);
 
-        PlayerDataSaver.Instance.OnDataLoaded += (name) => InputField.text = name;
+        InputField.text = PlayerData.Values.name;
     }
 }

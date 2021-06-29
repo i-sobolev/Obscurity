@@ -123,4 +123,55 @@ namespace API
             yield return webRequest.SendWebRequest();
         }
     }
+
+    public class ItemController
+    {
+        private readonly string _apiUri = "http://ovz6.burnfeniks.m61kn.vps.myjino.ru/api/Items";
+        public List<ItemViewModel> RequestResult { get; private set; }
+
+        public IEnumerator Get(int storageId)
+        {
+            UnityWebRequest webRequest = UnityWebRequest.Get(_apiUri + $"?storageId={storageId}");
+            webRequest.SetRequestHeader("Content-type", "application/json");
+
+            yield return webRequest.SendWebRequest();
+
+            while (!webRequest.isDone)
+                yield return null;
+
+            byte[] result = webRequest.downloadHandler.data;
+
+            if (result != null)
+            {
+                string json = Encoding.UTF8.GetString(result);
+                
+                if (json != string.Empty)
+                {
+                    JsonHelper.FixJson(ref json);
+                    RequestResult = JsonHelper.FromJson<ItemViewModel>(json).ToList();
+                }
+            }
+        }
+
+        public IEnumerator Post(ItemViewModel item)
+        {
+            string json = JsonUtility.ToJson(item);
+
+            var webRequest = new UnityWebRequest(_apiUri, "POST");
+
+            var post = Encoding.UTF8.GetBytes(json);
+
+            webRequest.uploadHandler = new UploadHandlerRaw(post);
+            webRequest.downloadHandler = new DownloadHandlerBuffer();
+            webRequest.SetRequestHeader("Content-type", "application/json");
+
+            yield return webRequest.SendWebRequest();
+        }
+
+        public IEnumerator Put(int itemId)
+        {
+            var webRequest = new UnityWebRequest(_apiUri + $"?itemId={itemId}", "DELETE");
+            yield return webRequest.SendWebRequest();
+        }
+    }
 }

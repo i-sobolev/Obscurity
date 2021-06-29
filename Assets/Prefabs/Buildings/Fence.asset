@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 152095014da27114386ffb7d970a86e9, type: 3}
-  m_Name: TestBuilding
+  m_Name: Fence
   m_EditorClassIdentifier: 
-  BuildingTemplate: {fileID: 7518935126672679793, guid: 420cf0f146b339843a7268f0a9df988a,
+  BuildingTemplate: {fileID: 1715507760122689305, guid: 272d990f1b29bc54baf6337674924571,
     type: 3}
-  Icon: {fileID: 0}
-  Name: Building
+  Icon: {fileID: 21300000, guid: d4aa67156d63e6b48926d8702064aa1b, type: 3}
+  Name: Fence
   RequiredResources:
   - ResoucesType: 1
     Amount: 100

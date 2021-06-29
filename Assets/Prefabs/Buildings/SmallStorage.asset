@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 152095014da27114386ffb7d970a86e9, type: 3}
-  m_Name: TestStorage
+  m_Name: SmallStorage
   m_EditorClassIdentifier: 
-  BuildingTemplate: {fileID: -2156432378191543311, guid: 5eb006626477d23418bb796cad2302d5,
+  BuildingTemplate: {fileID: 3849499226325564289, guid: 072d54dcc79e3a14681429a0f8f91b52,
     type: 3}
-  Icon: {fileID: 0}
-  Name: Storage
+  Icon: {fileID: 21300000, guid: 20081ae9e6e68fa43ace6b8c1c7dba28, type: 3}
+  Name: Small storage
   RequiredResources:
   - ResoucesType: 1
     Amount: 150

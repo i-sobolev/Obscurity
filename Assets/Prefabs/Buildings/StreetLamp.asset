@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 152095014da27114386ffb7d970a86e9, type: 3}
-  m_Name: TestLightning
+  m_Name: StreetLamp
   m_EditorClassIdentifier: 
-  BuildingTemplate: {fileID: -8217174064118909831, guid: af5445b3c69ed2f42af5fdfa5e3124cf,
+  BuildingTemplate: {fileID: 5212148531098922381, guid: 344ab11092cb61840844cc3fc37d4b46,
     type: 3}
-  Icon: {fileID: 0}
-  Name: Lightning
+  Icon: {fileID: 21300000, guid: c80356681a71dc94a821d4c5d5e3e86c, type: 3}
+  Name: StreetLamp
   RequiredResources:
   - ResoucesType: 0
     Amount: 50

@@ -98,7 +98,7 @@ public class UIPlayerInventory : MonoBehaviour
     private void TakeItemFromStorage()
     {
         _playerInventory.AddItem(_selectedItem.ItemReference);
-        _openedStorage.Items.Remove(_selectedItem.ItemReference);
+        _openedStorage.RemoveItem(_selectedItem.ItemReference);
         
         ShowOpenedStorageItems();
 
@@ -108,7 +108,7 @@ public class UIPlayerInventory : MonoBehaviour
     private void PutItemInStorage()
     {
         _playerInventory.RemoveItem(_selectedItem.ItemReference);
-        _openedStorage.Items.Add(_selectedItem.ItemReference);
+        _openedStorage.AddItem(_selectedItem.ItemReference);
         
         _itemManageWindow.Hide();
 

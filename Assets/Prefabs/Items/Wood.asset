@@ -15,5 +15,6 @@ MonoBehaviour:
   Name: Wood
   GameObject: {fileID: 7164876418768649966, guid: b1618ae938a31e548bbc3ace74dd447f,
     type: 3}
+  TypeId: 1
   ResoucesType: 1
   Amount: 200

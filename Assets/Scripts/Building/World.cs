@@ -11,8 +11,10 @@ public class World : MonoBehaviour
     public static World Instance { private set; get; }
 
     public ScriptableObjects.BuildingTemlates BuildingTemlates;
-
+    
     private BuildingController _apiBuildingController;
+
+    public ScriptableObjects.ItemTemplates ItemTemplates;
 
     private void Awake()
     {
@@ -61,13 +63,20 @@ public class World : MonoBehaviour
                 Quaternion.Euler(0, building.rotation, 0)
             );
 
-            newBuilding.Owner = building.owner;
+            newBuilding.Owner = building.owner == string.Empty ? "unknown" : building.owner;
 
             if (newBuilding is LightningBuilding lightning)
+            {
                 lightning.Fuel = building.lightning.Fuel;
+            }
 
             if (newBuilding is StorageBuilding storage)
+            {
                 storage.IsLocked = building.storage.isLocked;
+                storage.StorageId = building.id;
+
+                storage.SetBuildedByPlayerState();
+            }
         });
     }
 }
