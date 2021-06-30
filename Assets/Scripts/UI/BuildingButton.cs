@@ -8,13 +8,15 @@ public class BuildingButton : MonoBehaviour
     public UnityAction OnSelected;
 
     [SerializeField] private Text _buildingNameField;
-    [SerializeField] private Text _requiredComponentsField;
+    [SerializeField] private Image _buildingIcon;
+    //[SerializeField] private Text _requiredComponentsField;
 
     public void SetBuilding(ScriptableObjects.Building building)
     {
         Building = building;
+        _buildingIcon.sprite = building.Icon;
         _buildingNameField.text = building.Name;
-        _requiredComponentsField.text = "None";
+        //_requiredComponentsField.text = "None";
     }
 
     public void Select()

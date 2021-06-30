@@ -9,11 +9,12 @@ public class Item
         Name = itemReference.Name;
         GameObject = itemReference.GameObject;
         TypeId = itemReference.TypeId;
+        UIIcon = itemReference.Icon;
     }
 
     public string Name;
     public ItemGameObject GameObject;
-
+    public Sprite UIIcon;
     public int TypeId;
     public int Id;
 }

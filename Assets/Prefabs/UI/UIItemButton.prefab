@@ -139,7 +139,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.028301895, g: 0.028301895, b: 0.028301895, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -221,6 +221,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ece780ff350b9d24abbb203da45a8813, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ItemReference: {fileID: 0}
   ButtonComponent: {fileID: 7601594523899252117}
+  _icon: {fileID: 7601594523899252118}
   _resourcesAmount: {fileID: 2345817026870106080}

@@ -9,12 +9,15 @@ public class UIItem : MonoBehaviour
     public Item ItemReference;
     public Button ButtonComponent;
 
+    [SerializeField] private Image _icon;
     [SerializeField] private Text _resourcesAmount;
 
     public void Set(ref Item linkedItem, IStorage linkedStorage)
     {
         ItemReference = linkedItem;
         LinkedStorage = linkedStorage;
+
+        _icon.sprite = linkedItem.UIIcon;
 
         if (ItemReference is Resources resources)
             SetResouresAmount(resources.Amount);

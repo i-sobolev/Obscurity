@@ -8,6 +8,7 @@ namespace ScriptableObjects
     public class Item : ScriptableObject
     {
         public string Name;
+        public Sprite Icon;
         public ItemGameObject GameObject;
         public int TypeId;
     }
