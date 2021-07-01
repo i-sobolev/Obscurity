@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4301c7e3b09cfaf44814ecf9ab7459a2, type: 3}
   m_Name: Metal
   m_EditorClassIdentifier: 
-  Name: Wood
-  Icon: {fileID: 21300000, guid: 1de425a755fdc8140a24b156c0fd23f9, type: 3}
+  Name: Metal
+  Icon: {fileID: 21300000, guid: 5f9fdc78b0dc5e64e84b76e7bdc91934, type: 3}
   GameObject: {fileID: 625808609337538705, guid: 71963f8918e6f2241943ba0aa6a12cf3,
     type: 3}
   TypeId: 0

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Wood
   m_EditorClassIdentifier: 
   Name: Wood
-  Icon: {fileID: 21300000, guid: 5f9fdc78b0dc5e64e84b76e7bdc91934, type: 3}
+  Icon: {fileID: 21300000, guid: 1de425a755fdc8140a24b156c0fd23f9, type: 3}
   GameObject: {fileID: 7164876418768649966, guid: b1618ae938a31e548bbc3ace74dd447f,
     type: 3}
   TypeId: 1
