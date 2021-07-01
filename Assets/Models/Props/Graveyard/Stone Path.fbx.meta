@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: e31a6cf7b4ac18941a794d90f5c67dc0
+guid: 5afec06c9bcf71f4fbf52ab7dba9cd59
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
@@ -7,8 +7,8 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Simple Wood
-    second: {fileID: 2100000, guid: 6135490228fe89246acf5ad7f28e1c66, type: 2}
+      name: No Name
+    second: {fileID: 2100000, guid: 0f26c2b9b436edd4882dc33164316622, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
@@ -39,7 +39,7 @@ ModelImporter:
     isReadable: 0
   meshes:
     lODScreenPercentages: []
-    globalScale: 3
+    globalScale: 2.5
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
@@ -86,7 +86,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 3
+    globalScale: 2.5
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
