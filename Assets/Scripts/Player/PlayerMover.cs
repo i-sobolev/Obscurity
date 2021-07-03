@@ -7,8 +7,11 @@ public class PlayerMover : MonoBehaviour
 {
     public float Speed { get; private set; }
 
+    [SerializeField] private float _speedMultiplier;
+
     private CharacterController _characterController;
     private Axises _moveAxises;
+
 
     private void Awake()
     {
@@ -30,7 +33,7 @@ public class PlayerMover : MonoBehaviour
 
         moveDirection = Vector3.ClampMagnitude(moveDirection, 1f);
 
-        _characterController.Move(moveDirection * Speed * 0.1f);
+        _characterController.Move(moveDirection * Speed * Time.deltaTime * _speedMultiplier);
         _characterController.Move(Vector3.down * 0.1f);
     }
 
