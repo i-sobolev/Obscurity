@@ -162,11 +162,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 6278073308936952236}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 48840735d8db416429d2451617e77075, type: 3}
+  m_Script: {fileID: 11500000, guid: 44013bfa5b96ea04480d954a6eb4ee1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _buildingNameField: {fileID: 3894222495132009243}
-  _buildingIcon: {fileID: 823383731062801873}
+  _buttonComponent: {fileID: 8189239157749203216}
+  _name: {fileID: 3894222495132009243}
+  _icon: {fileID: 823383731062801873}
 --- !u!114 &8189239157749203216
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -209,18 +210,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 449036646184067017}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: -4651930869317944481}
-        m_MethodName: Select
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!1 &6579514634577614320
 GameObject:
   m_ObjectHideFlags: 0
