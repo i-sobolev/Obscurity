@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Obscurity.UI
 {
-    public class Builder : MonoBehaviour
+    public class UIBuilder : MonoBehaviour
     {
         [Header("References")]
         [SerializeField] private Obscurity.Builder _builder;

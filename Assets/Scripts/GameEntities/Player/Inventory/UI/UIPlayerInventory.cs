@@ -3,13 +3,13 @@ using UnityEngine;
 
 namespace Obscurity.UI
 {
-    public class PlayerInventory : MonoBehaviour
+    public class UIPlayerInventory : MonoBehaviour
     {
-        [SerializeField] private Item _itemTemplate;
+        [SerializeField] private UIItem _itemTemplate;
         [SerializeField] private ItemManageWindow _itemManageWindow;
         [SerializeField] private Obscurity.PlayerInventory _playerInventory;
         
-        private Item _selectedItem;
+        private UIItem _selectedItem;
 
         private IStorage _openedStorage;
         [SerializeField] private GameObject _storageUIElement;
@@ -47,7 +47,7 @@ namespace Obscurity.UI
 
         private void ShowItems(IStorage storage, Transform parentItemsTransform)
         {
-            parentItemsTransform.GetComponentsInChildren<Item>().ToList().ForEach(item => Destroy(item.gameObject));
+            parentItemsTransform.GetComponentsInChildren<UIItem>().ToList().ForEach(item => Destroy(item.gameObject));
 
             storage.Items.ForEach(item =>
             {
@@ -57,7 +57,7 @@ namespace Obscurity.UI
             });
         }
 
-        private void ShowItemManageWindow(Item itemButton)
+        private void ShowItemManageWindow(UIItem itemButton)
         {
             var itemStorageType =
                 _openedStorage == null ?

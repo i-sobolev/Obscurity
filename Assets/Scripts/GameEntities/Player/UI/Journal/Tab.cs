@@ -5,7 +5,6 @@ namespace Obscurity.UI
 {
     public class Tab : MonoBehaviour
     {
-        [HideInInspector] public Journal Journal;
         public Button LinkedButton;
         public TabType TabName;
     }

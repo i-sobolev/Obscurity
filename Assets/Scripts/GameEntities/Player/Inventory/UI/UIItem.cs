@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 namespace Obscurity.UI
 {
-    public class Item : MonoBehaviour
+    public class UIItem : MonoBehaviour
     {
         public IStorage LinkedStorage;
         public Obscurity.Item ItemReference;

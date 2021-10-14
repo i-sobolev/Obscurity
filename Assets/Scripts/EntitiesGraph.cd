@@ -1,0 +1,389 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="Obscurity.Building" Collapsed="true">
+    <Position X="8.25" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\GameEntities\Building\Building.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Obscurity.LightningBuilding" Collapsed="true">
+    <Position X="7" Y="12.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAAAAAAAAABAAAAAAAAAAAAgAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\GameEntities\Building\LightningBuilding.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Obscurity.StorageBuilding" Collapsed="true">
+    <Position X="9.25" Y="12.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAAKAAAAAAABAAAgAAAAAAEAAAAAAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\GameEntities\Building\StorageBuilding.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Obscurity.BuildingTemplate" Collapsed="true">
+    <Position X="4.75" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQgAAAAAAAAAAAAAAMAAAA=</HashCode>
+      <FileName>Assets\Scripts\GameEntities\Building\Templates\BuildingTemplate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Obscurity.HumanoidMovement" Collapsed="true">
+    <Position X="21.25" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAAAAAAAAAAAAAAABAAgAAAAAAAAAAAAAAAE=</HashCode>
+      <FileName>Assets\Scripts\GameEntities\Humanoid\Movement\HumanoidMovement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Obscurity.PlayerAnimator" Collapsed="true">
+    <Position X="19" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAIAAAAQAAAAAAAAAAAAABIAAAAAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\GameEntities\Humanoid\PlayerAnimator.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_playerMover" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Obscurity.Inventory" Collapsed="true">
+    <Position X="9" Y="15.25" Width="1.75" />
+    <AssociationLine Name="Items" Type="Obscurity.Item" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="9.812" Y="15.25" />
+        <Point X="9.812" Y="14.375" />
+        <Point X="7.188" Y="14.375" />
+        <Point X="7.188" Y="14.75" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-1.804" Y="0.503" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAACAAAAAAABAAAgAAAAAAEACAAAAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\GameEntities\Item\Inventory.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Items" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Obscurity.ItemGameObject" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="6.5" Y="16" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAABAAEAAAAAAAAAAAAAAAABEA=</HashCode>
+      <FileName>Assets\Scripts\GameEntities\Item\ItemGameObject.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Obscurity.Item" Collapsed="true">
+    <Position X="6.5" Y="14.75" Width="1.5" />
+    <AssociationLine Name="GameObject" Type="Obscurity.ItemGameObject" ManuallyRouted="true" FixedToPoint="true">
+      <Path>
+        <Point X="7.188" Y="15.312" />
+        <Point X="7.188" Y="16" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-1.195" Y="0.1" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAMAAAA=</HashCode>
+      <FileName>Assets\Scripts\GameEntities\Item\Items\Item.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="GameObject" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Obscurity.Resource" Collapsed="true">
+    <Position X="4.5" Y="14.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAQACAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\GameEntities\Item\Items\Resource.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Obscurity.ItemTemplate" Collapsed="true">
+    <Position X="6.5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAMAAAA=</HashCode>
+      <FileName>Assets\Scripts\GameEntities\Item\Templates\ItemTemplate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Obscurity.ResourcesTemplate" Collapsed="true">
+    <Position X="6.5" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\GameEntities\Item\Templates\ResourcesTemplate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Obscurity.Builder" Collapsed="true">
+    <Position X="13.5" Y="7.5" Width="1.5" />
+    <AssociationLine Name="_playerInventory" Type="Obscurity.PlayerInventory" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="14.188" Y="7.5" />
+        <Point X="14.188" Y="7.125" />
+        <Point X="20" Y="7.125" />
+        <Point X="20" Y="7.5" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="4.999" Y="0.48" Height="0.182" Width="1.215" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAJACAAABgAAAAAAAAAAAAAAAAAAgAAAAAAAKAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\GameEntities\Player\Builder\Builder.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_playerInventory" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Obscurity.PlayerInventory" Collapsed="true" HideInheritanceLine="true">
+    <Position X="19.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAgAAAAAAAAAAAAAQAAgAAAAAAEABAgIAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\GameEntities\Player\Inventory\PlayerInventory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Obscurity.PlayerCamera" Collapsed="true">
+    <Position X="16.5" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAAAAAIQAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\GameEntities\Player\PlayerCamera.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Obscurity.PlayerCursor" Collapsed="true">
+    <Position X="16.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AASAAAAAAEAAAAAAAgAAAAAAEAAAAAAAAAAAAgAAAEA=</HashCode>
+      <FileName>Assets\Scripts\GameEntities\Player\PlayerCursor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Obscurity.PlayerMovement" Collapsed="true" HideInheritanceLine="true">
+    <Position X="16.5" Y="12.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AASAABAAAKAAAAAAAAEACAAAAAAAAEAAAAAAAAAAAEI=</HashCode>
+      <FileName>Assets\Scripts\GameEntities\Player\PlayerMovement.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_playerCamera" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Obscurity.Extentions" Collapsed="true">
+    <Position X="2.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Tools\Extentions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Obscurity.JsonHelper" Collapsed="true">
+    <Position X="0.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAQAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Tools\JsonHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Obscurity.Wrapper&lt;T&gt;" Collapsed="true">
+    <Position X="2.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Tools\JsonHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Obscurity.Singleton&lt;T&gt;" Collapsed="true">
+    <Position X="4.75" Y="0.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAABAAAAIQAAAAAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\Tools\Singleton.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Obscurity.UI.UIBuilder" Collapsed="true">
+    <Position X="13.5" Y="5.75" Width="1.5" />
+    <AssociationLine Name="_builder" Type="Obscurity.Builder" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="13.5" Y="6.062" />
+        <Point X="13.125" Y="6.062" />
+        <Point X="13.125" Y="8.062" />
+        <Point X="13.5" Y="8.062" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.555" Y="-0.004" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="_buildingButtonTemplate" Type="Obscurity.UI.BuildingButton">
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="-1.767" Y="0.52" Height="0.182" Width="1.732" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAACAgAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAACEA=</HashCode>
+      <FileName>Assets\Scripts\GameEntities\Player\Builder\UI\UIBuilder.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_builder" />
+      <Field Name="_buildingButtonTemplate" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Obscurity.UI.BuildingButton" Collapsed="true">
+    <Position X="13.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAABAAAAAAAAAAAAAAACAABAACCAAAABAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\GameEntities\Player\Builder\UI\BuildingButton.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Obscurity.UI.UIItem" Collapsed="true">
+    <Position X="22.25" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAABAAAAAhAAAAAAACAQAAAAAAACAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\GameEntities\Player\Inventory\UI\UIItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Obscurity.UI.ItemManageWindow" Collapsed="true">
+    <Position X="20.25" Y="3.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAAQAAAEAEAAAAAAAAABMCAAAAAAAAAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\GameEntities\Player\Inventory\UI\ItemManageWindow.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Obscurity.UI.UIPlayerInventory" Collapsed="true">
+    <Position X="20.5" Y="6" Width="1.5" />
+    <AssociationLine Name="_playerInventory" Type="Obscurity.PlayerInventory" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="21.312" Y="6.691" />
+        <Point X="21.312" Y="7.875" />
+        <Point X="20.75" Y="7.875" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAACgACAgECAAAiAAAAAAAQAAAADIACAAICAAiUA=</HashCode>
+      <FileName>Assets\Scripts\GameEntities\Player\Inventory\UI\UIPlayerInventory.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_itemManageWindow" />
+      <Field Name="_playerInventory" />
+      <Field Name="_itemTemplate" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Obscurity.UI.ActionsLogger" Collapsed="true">
+    <Position X="0.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABABAAAAAAAAAAAEAAAAAAQAAgAAAAAQAAEAAAAIEA=</HashCode>
+      <FileName>Assets\Scripts\GameEntities\Player\UI\ActionsLogger.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Obscurity.UI.Journal" Collapsed="true">
+    <Position X="25.25" Y="4.75" Width="1.5" />
+    <AssociationLine Name="Tabs" Type="Obscurity.UI.Tab" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="25.938" Y="5.441" />
+        <Point X="25.938" Y="6" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAACAA=</HashCode>
+      <FileName>Assets\Scripts\GameEntities\Player\UI\Journal\Journal.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="Tabs" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Obscurity.UI.JournalSwitcher" Collapsed="true" HideInheritanceLine="true">
+    <Position X="27.25" Y="4" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>CAQAAEAAAAAAAAAAAAAAAAAAAAAAEAAAAABAAAAAMEA=</HashCode>
+      <FileName>Assets\Scripts\GameEntities\Player\UI\Journal\JournalSwitcher.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_journal" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Obscurity.UI.Tab" Collapsed="true">
+    <Position X="25.25" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAA=</HashCode>
+      <FileName>Assets\Scripts\GameEntities\Player\UI\Journal\Tab.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Player" Collapsed="true">
+    <Position X="16.5" Y="8" Width="1.5" />
+    <AssociationLine Name="_builder" Type="Obscurity.Builder" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="16.5" Y="8.562" />
+        <Point X="14.188" Y="8.562" />
+        <Point X="14.188" Y="8.191" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-2.146" Y="0.485" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="_inventory" Type="Obscurity.PlayerInventory" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="18" Y="8.441" />
+        <Point X="20" Y="8.441" />
+        <Point X="20" Y="8.191" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="1.005" Y="0.386" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAABAAAAAAAAACAAAAAACAACAA=</HashCode>
+      <FileName>Assets\Scripts\GameEntities\Player\Player.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_builder" />
+      <Field Name="_inventory" />
+      <Field Name="_camera" />
+    </ShowAsAssociation>
+  </Class>
+  <Struct Name="Obscurity.RequiredResource" Collapsed="true">
+    <Position X="4" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAQACAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\GameEntities\Building\RequiredResource.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Obscurity.Axises" Collapsed="true">
+    <Position X="0.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\GameEntities\Player\PlayerMovement.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Obscurity.Note" Collapsed="true">
+    <Position X="2.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAABAAAAEAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\InProcess\PlayerStatus\PlayerStatus.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Interface Name="Obscurity.IIteractable" Collapsed="true">
+    <Position X="4.75" Y="11.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\GameEntities\Interfaces\IIteractable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Obscurity.IStorage" Collapsed="true">
+    <Position X="4.75" Y="12.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAACAAAAAAAAAAAgAAAAAAEAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\GameEntities\Interfaces\IStorage.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="Obscurity.ResouceType" Collapsed="true">
+    <Position X="0.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\GameEntities\Item\Items\Resource.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Obscurity.UI.TabType" Collapsed="true">
+    <Position X="2.25" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAgAAAAA=</HashCode>
+      <FileName>Assets\Scripts\GameEntities\Player\UI\Journal\Tab.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

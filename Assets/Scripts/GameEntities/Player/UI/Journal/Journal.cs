@@ -11,7 +11,6 @@ namespace Obscurity.UI
         {
             Tabs.ForEach(tab =>
             {
-                tab.Journal = this;
                 tab.LinkedButton.onClick.AddListener(() => ShowTab(tab));
             });
 
